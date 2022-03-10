@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    background-color: #ececec;
+}
+
+.todo-wrap {
+    max-width: 500px;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+.title {
+    padding: 46px 26px 26px 16px;
+    color: #ffffff;
+    background-color: #2a2d3e;
+}
+
+h1, h2 {
+    margin: 0;
+    font-weight: normal;
+}
+
+h1 {
+    margin-bottom: 16px;
+}
+
+.todo-container {
+    background-color: #ffffff;
+}
+
+.todo, .add-todo {
+    border-bottom: 1px solid #cccccc;
+}
+
+.todo {
+    position: relative;
+    padding: 8px 10px;
+}
+
+.todo input[type="checkbox"] {
+    position: absolute;
+    left: -1000px;
+}
+
+.todo input[type="checkbox"]:checked ~ label {
+    position: relative;
+    color: #535353; 
+    text-decoration: line-through;
+}
+
+.todo input[type="checkbox"] ~ label::before {
+    content: '';
+    display: inline-block;
+    position: relative;
+    top: 3px;
+    width: 18px;
+    height: 18px;
+    margin-right: 12px;
+    border: 1px solid #c6c6c6;
+    border-radius: 4px;
+    background: #fff;
+}
+
+.todo input[type="checkbox"]:checked ~ label::before {
+    color: #ffffff;
+    background-color: #2a2d3e;
+}
+
+.todo input[type="checkbox"]:checked ~ label::after {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 5px;
+    width: 9px;
+    height: 5px;
+    background: none;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    transform: rotate(-45deg);
+}
+
+.todo label {
+    cursor: pointer;
+}
+
+.add-todo {
+    background-color: #ffffff;
+    padding: 16px 10px;
+}
+
+.add-todo button {
+    background-color: #181920;
+    border: none;
+    width: 20px;
+    height: 20px;
+    color: #ffffff;
+    border-radius: 50%;
+}
+
+.add-todo input[type="text"] {
+    border: none;
+}
